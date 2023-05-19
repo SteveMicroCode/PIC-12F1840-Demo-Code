@@ -11,3 +11,11 @@ a chosen internal clock rate. All pretty simple though.
 
 The first example code posted is a tiny "Hello World" program for Microchip XC8 that proves that the 12F1840 is alive. 
 It demonstrates configuration for the much higher max clock rate of 32 MHz possible with this 12F chip.
+
+I have ported the TM1637 display driver code originally written for the 12F675
+to the 12F1840 here. See also my project https://github.com/SteveMicroCode/PIC12F675-TM1637-Display-Code.
+It is again a standalone C source file for XC8 though should port pretty easily to other compilers.
+The 12F1840 code demonstrates setup of a 32MHz max clock speed with bit timing for the serial data
+unaffected as it is achieved using the XC8 delay_us macro. An incrementing count 0-9999 is displayed. Due 
+to the increased resources of this chip only approx 13% program memory is now required for driving the display 
+so that significant application program and memory space remains available.
