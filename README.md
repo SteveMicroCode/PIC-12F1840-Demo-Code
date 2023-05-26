@@ -19,3 +19,14 @@ The 12F1840 code demonstrates setup of a 32MHz max clock speed with bit timing f
 unaffected as it is achieved using the XC8 delay_us macro. An incrementing count 0-9999 is displayed. Due 
 to the increased resources of this chip only approx 13% program memory is now required for driving the display 
 so that significant application program and memory space remains available.
+
+My analogue to digital conversion code written for the PIC12F675 has been ported to the PIC 12F1840 and enhanced.
+The 12F1840 is a much improved chip for ADC work. In particular it has a fixed voltage reference (FVR) with 3 
+optional reference voltages 2^10 (1024mV) .. 2^12 (4096mV). This simplifies ratiometric to mV conversions and coding
+overhead is reduced cf the 12F875. Note that ADC setup on the 12F1840 is not a simple port of 12F875 code, there
+is an extra register ADCON1 and the bitfields for ADC setup are modified. ADC reads in the example code are
+at 1 second intervals with Timer1 configured for 50ms interrupt generation via a suitable preload. Timer1 setup
+is as for the 12F875 though note that T1CON bit 7 is now significant and should not be accidental misconfigured.
+Up to 4 analogue inputs can be configured as described in the code and the port read is switched on the fly as 
+required. There is also a description of how to select the FVR voltage reference in the code comments. The example
+configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference.
