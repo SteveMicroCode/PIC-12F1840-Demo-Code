@@ -29,4 +29,6 @@ at 1 second intervals with Timer1 configured for 50ms interrupt generation via a
 is as for the 12F875 though note that T1CON bit 7 is now significant and should not be accidental misconfigured.
 Up to 4 analogue inputs can be configured as described in the code and the port read is switched on the fly as 
 required. There is also a description of how to select the FVR voltage reference in the code comments. The example
-configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference.
+configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference. For this example only
+approx 20% of program memory is used, given the increased resources of the 12F1840 and better ADC code efficiency.
+There is therefore far greater free space available for application development when using the ADC and TM1637 display.
