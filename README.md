@@ -23,7 +23,7 @@ so that significant application program and memory space remains available.
 My analogue to digital conversion code written for the PIC12F675 has been ported to the PIC 12F1840 and enhanced.
 The 12F1840 is a much improved chip for ADC work. In particular it has a fixed voltage reference (FVR) with 3 
 optional reference voltages 2^10 (1024mV) .. 2^12 (4096mV). This simplifies ratiometric to mV conversions and coding
-overhead is reduced cf the 12F875. Note that ADC setup on the 12F1840 is not a simple port of 12F875 code, there
+overhead is reduced cf the 12F675. Note that ADC setup on the 12F1840 is not a simple port of 12F675 code, there
 is an extra register ADCON1 and the bitfields for ADC setup are modified. ADC reads in the example code are
 at 1 second intervals with Timer1 configured for 50ms interrupt generation via a suitable preload. Timer1 setup
 is as for the 12F875 though note that T1CON bit 7 is now significant and should not be accidental misconfigured.
