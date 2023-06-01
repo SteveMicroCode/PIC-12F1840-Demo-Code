@@ -26,7 +26,7 @@ optional reference voltages 2^10 (1024mV) .. 2^12 (4096mV). This simplifies rati
 overhead is reduced cf the 12F675. Note that ADC setup on the 12F1840 is not a simple port of 12F675 code, there
 is an extra register ADCON1 and the bitfields for ADC setup are modified. ADC reads in the example code are
 at 1 second intervals with Timer1 configured for 50ms interrupt generation via a suitable preload. Timer1 setup
-is as for the 12F875 though note that T1CON bit 7 is now significant and should not be accidental misconfigured.
+is as for the 12F675 though note that T1CON bit 7 is now significant and should not be accidental misconfigured.
 Up to 4 analogue inputs can be configured as described in the code and the port read is switched on the fly as 
 required. There is also a description of how to select the FVR voltage reference in the code comments. The example
 configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference. For this example only
