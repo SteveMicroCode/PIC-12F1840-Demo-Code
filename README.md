@@ -32,3 +32,8 @@ required. There is also a description of how to select the FVR voltage reference
 configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference. For this example only
 approx 20% of program memory is used, given the increased resources of the 12F1840 and better ADC code efficiency.
 There is therefore far greater free space available for application development when using the ADC and TM1637 display.
+
+Note that the TM1637 module used can be made to communicate faster than the speed used in the demo code, see
+my description .pdf file
+
+Steve 6/23
