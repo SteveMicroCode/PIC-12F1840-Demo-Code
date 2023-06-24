@@ -66,7 +66,7 @@
 #define T1PRESCALE 0x03                // 2 bits control, 01 = 1:2 used for 8 MHz clk, 11 = 1:8 for 32 MHz
 #define TIMER1ON 0x01                  // Used to set bit0 T1CON = Timer1 ON
 // Timer1 setup values for 50ms interrupt using a preload:
-#define TIMER1LOWBYTE 0x60             // 50000 cycles @ 1:2 prescale == 50ms.
+#define TIMER1LOWBYTE 0x60             // 50000 cycles @ 1:8 prescale == 50ms.
 #define TIMER1HIGHBYTE 0x3C            // Preload no delays = 65536-50000 = 15536 = 0x3C60
 
 //General global variables:
