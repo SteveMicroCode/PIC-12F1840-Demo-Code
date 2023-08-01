@@ -17,8 +17,8 @@ to the 12F1840 here. See also my project https://github.com/SteveMicroCode/PIC12
 It is again a standalone C source file for XC8 though should port pretty easily to other compilers.
 The 12F1840 code demonstrates setup of a 32MHz max clock speed with bit timing for the serial data
 unaffected as it is achieved using the XC8 delay_us macro. An incrementing count 0-9999 is displayed. Due 
-to the increased resources of this chip only approx 13% program memory is now required for driving the display 
-so that significant application program and memory space remains available.
+to the increased resources of this chip only approx 13% program memory (using free XC8) is now required for 
+driving the display so that significant application program and memory space remains available.
 
 My analogue to digital conversion code written for the PIC12F675 has been ported to the PIC 12F1840 and enhanced.
 The 12F1840 is a much improved chip for ADC work. In particular it has a fixed voltage reference (FVR) with 3 
@@ -30,8 +30,7 @@ is as for the 12F675 though note that T1CON bit 7 is now significant and should 
 Up to 4 analogue inputs can be configured as described in the code and the port read is switched on the fly as 
 required. There is also a description of how to select the FVR voltage reference in the code comments. The example
 configures 2 analogue ports and by default reads AN0 on pin 7 using a 4.096V reference. For this example only
-approx 20% of program memory is used, given the increased resources of the 12F1840 and better ADC code efficiency.
-There is therefore far greater free space available for application development when using the ADC and TM1637 display.
+approx 20% of program memory (basic free XC8) is used, given the increased resources of the 12F1840 and better ADC code efficiency. There is therefore far greater free space available for application development when using the ADC and TM1637 display.
 
 Note that the TM1637 module used can be made to communicate faster than the speed used in the demo code, see
 my description .pdf file
