@@ -436,6 +436,7 @@ void initialise12F1840ADC(uint8_t ADCrefSelect,uint8_t ADCchannel)
  * ***********************************************************************************************/
 void setADCchannel(uint8_t ADCchannel)
 {
+   ADCON0 &= 0b10000011;         // First clear the channel select bits 2..6
    ADCON0 |= ADCchannel<<2;      // Set the active ADC channel, bits 2..6 are CHS, 0 = AN0 ..3 = AN3 
 }
 
